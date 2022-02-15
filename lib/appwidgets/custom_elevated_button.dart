@@ -9,7 +9,7 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () => callback,
+      onPressed: () => callback(),
       child: Text(btnText, style: const TextStyle(fontSize: 25),),
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(
