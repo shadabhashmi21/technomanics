@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technomanics/appwidgets/background.dart';
 import 'package:technomanics/appwidgets/custom_elevated_button.dart';
 import 'package:technomanics/screens/login_page.dart';
+import 'package:technomanics/screens/signup_page.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -24,15 +25,18 @@ class Dashboard extends StatelessWidget {
               children: [
                 CustomElevatedButton(
                     btnText: 'Login',
-                    callback: () =>
-                        Navigator.push(
+                    callback: () => Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const LoginPage()),
-                        )
-                ),
-                CustomElevatedButton(btnText: 'Signup', callback: () {
-
-                })
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()),
+                        )),
+                CustomElevatedButton(
+                    btnText: 'Signup',
+                    callback: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignUpPage()),
+                        ))
               ],
             )
           ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppTextField extends StatelessWidget {
+  final TextEditingController controller;
   final String labelText;
   final String hintText;
   final bool isObscure;
@@ -9,12 +10,14 @@ class AppTextField extends StatelessWidget {
       {Key? key,
       required this.labelText,
       required this.hintText,
-      this.isObscure = false})
+      this.isObscure = false,
+      required this.controller})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       obscureText: isObscure,
       decoration: InputDecoration(
         filled: true,

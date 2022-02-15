@@ -3,14 +3,14 @@ import 'package:technomanics/appwidgets/app_text_field.dart';
 import 'package:technomanics/appwidgets/background.dart';
 import 'package:technomanics/appwidgets/custom_elevated_button.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpPageState extends State<SignUpPage> {
   final _emailTextController = TextEditingController();
   final _passwordTextController = TextEditingController();
 
@@ -46,15 +46,10 @@ class _LoginPageState extends State<LoginPage> {
                 hintText: 'Enter Password',
                 isObscure: true,
               ),
-              const SizedBox(height: 10),
-              const Text(
-                'Forgot Password?',
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
               const SizedBox(
                 height: 20,
               ),
-              CustomElevatedButton(btnText: 'LOGIN', callback: () => {}),
+              CustomElevatedButton(btnText: 'SIGN UP', callback: () => {}),
             ],
           ),
         ),
