@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technomanics/appwidgets/app_text_field.dart';
 import 'package:technomanics/appwidgets/background.dart';
 import 'package:technomanics/appwidgets/custom_elevated_button.dart';
+import 'package:technomanics/screens/user_profile.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -49,7 +50,11 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(
                 height: 20,
               ),
-              CustomElevatedButton(btnText: 'SIGN UP', callback: () => {}),
+              CustomElevatedButton(btnText: 'SIGN UP', callback: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const UserProfile()),
+              )),
             ],
           ),
         ),

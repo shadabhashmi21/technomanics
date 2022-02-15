@@ -7,12 +7,13 @@ class BackgroundImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SafeArea(
+        child: Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
               image: AssetImage('assets/images/app_background.png'),
               fit: BoxFit.cover)),
       child: page,
-    );
+    ));
   }
 }
